@@ -148,43 +148,62 @@ If a well known architecture was chosen:
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
+<hr>
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image4] Ahead only
+<hr>
+
+![alt text][image5] Children crossing
+<hr>
+
+ ![alt text][image6] Priority road
+ <hr>
+
+![alt text][image7] Right-of-way at the next intersection
+<hr>
+
+![alt text][image8] Speed limit (60km/h)
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
 | Image			        |     Prediction	| 
-|:---------------------::-------------------:| 
-| Stop Sign    | Stop sign   				| 
-| U-turn     	| U-turn 			|
-| Yield	| Yield		|
-| 100 km/h | Bumpy Road		|
-| Slippery Road		| Slippery Road    |
+|:---------------------:|:-------------------:| 
+| Ahead only    | Ahead only  				| 
+| Right-of-way at the next intersection | Right-of-way at the next intersection |
+| Priority road	| Priority road		|
+| Children crossing | Priority road		|
+| Speed limit (60km/h)		| Speed limit (60km/h)   |
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 95.3%.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 16th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image, the model is relatively sure that this is a "Ahead only" sign (probability of 99.9), and the image does contain a stop sign. The top five soft max probabilities were
 
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| Probability           |     Prediction        | 
+|:---------------------:|:---------------------:| 
+| 9.999942e-01          | Ahead only            | 
+| 4.385554e-06          | Yield                 |
+| 8.149665e-07          | Children crossing     |
+| 2.934660e-07          | Speed limit (60km/h)  |
+| 2.244020e-07          | Turn left ahead       |
 
 
-For the second image ... 
+For the fourth image, the model is relatively sure that this is a "Priority road" sign (probability of 59.6), and the image does contain a "Children crossing" sign. The top five soft max probabilities were
+
+| Probability           |     Prediction        | 
+|:---------------------:|:---------------------:| 
+|      0.595587     | Priority road            | 
+| 0.243497          | Right-of-way at the next intersection |
+| 0.037928          | End of no passing     |
+| 0.033671          | Ahead only  |
+| 0.029374          | Slippery road       |
+ 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
-
-
